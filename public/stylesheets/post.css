@@ -1,0 +1,80 @@
+#postTitle {
+	font-size: 32pt;
+	text-align: center;
+}
+
+#postContent {
+	font-size: 16pt;
+}
+
+#postAuthor {
+	font-size: 10pt;
+}
+
+#postDate {
+	display: block;
+	font-size: 10pt;
+}
+
+hr {
+	border: 1px solid #dfe4ea;
+	border-radius: 2px;
+	box-shadow: 1px 1px 1px #f1f2f6;
+}
+
+#comments {
+	margin-bottom: 50px;
+}
+
+.comment {
+	margin-top: 50px;
+}
+
+.commentInfo , .commentContent {
+	border: 1px solid #dfe4ea;
+	width: 80%;
+	padding-right: 20px;
+}
+
+.commentInfo i {
+	margin-right: 30px;
+}
+
+.commentContent {
+	padding: 10px;
+}
+
+.commentContent p {
+	word-wrap: break-word;
+}
+
+#commentForm input[type="text"], textarea {
+	max-width: 82%;
+	min-width: 82%;
+	height: 40px;
+	font-size: 16pt;
+	border: 1px solid #a4b0be;
+}
+
+#commentForm  textarea {
+	min-height: 100px;
+}
+
+#commentForm  input[type="reset"], #commentForm  input[type="submit"] {
+	background-color: #b1d9df;
+	border: none;
+	text-align: center;
+	text-decoration: none;
+	padding: 8px 32px;
+	font-size: 12pt;
+	transition: 0.5s;
+	margin-top: 10px;
+}
+#commentForm  input[type="reset"]:hover, #commentForm  input[type="submit"]:hover {
+	background-color: #70bddb;
+	border-bottom: 2px solid black;
+}
+
+#commentForm label {
+	color: #a4b0be;
+}

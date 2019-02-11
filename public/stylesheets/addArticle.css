@@ -1,0 +1,56 @@
+#container {
+	margin: 100px 250px 0px 250px;
+}
+
+h1 {
+	text-align: center;
+	background-color: #70bddb;
+	color: white;
+	padding: 15px 0px;
+	margin-top: 0px;
+	width: 100%;
+}
+
+article {
+	padding-top: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+#articleForm {
+	margin: 0px 20px;
+}
+
+#articleForm div {
+	margin: 20px 0px;
+}
+
+#articleForm input[type="text"], textarea {
+	max-width: 100%;
+	min-width: 100%;
+	height: 40px;
+	font-size: 16pt;
+	border: 1px solid #a4b0be;
+}
+
+#articleForm  textarea {
+	min-height: 300px;
+}
+
+#articleForm  input[type="reset"], #articleForm  input[type="submit"] {
+	background-color: #b1d9df;
+	border: none;
+	text-align: center;
+	text-decoration: none;
+	padding: 8px 32px;
+	font-size: 12pt;
+	transition: 0.5s;
+}
+#articleForm  input[type="reset"]:hover, #articleForm  input[type="submit"]:hover {
+	background-color: #70bddb;
+	border-bottom: 2px solid black;
+}
+
+#articleForm label {
+	color: #a4b0be;
+}

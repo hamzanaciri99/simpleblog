@@ -1,0 +1,65 @@
+<html>
+	<head>
+		<title>Welcome to Blog</title>
+		<link rel="stylesheet" type="text/css" href="/assets/stylesheets/main.css">
+		<link rel="stylesheet" type="text/css" href="/assets/stylesheets/post.css">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+		<script type="text/javascript" src="/assets/js/jQuery3.3.1.js"></script>
+		<script type="text/javascript">
+			var postID = "<%= id %>";
+		</script>
+	</head>
+	<body>
+		<div id="loading">Loading ... </div>
+		<div id="container">
+			<nav>
+				<table>
+					<tr>
+						<td><a href="/">Home</a></td>
+						<td><a href="/assets/addArticle.html">Add article</a></td>
+						<td><a href="/assets/about.html">About</a></td>
+					</tr>
+				</table>
+			</nav>
+			<article>
+				<div id="post">
+					<h1 id="postTitle"></h1>
+					<p id="postContent"></p>
+					<hr>
+					<i id="postAuthor"></i>
+					<i id="postDate"></i>
+				</div>
+				<hr>
+				<div id="comments">
+				</div>
+				<div id="addComment">
+					<h1>Write new comment</h1>
+					<form id="commentForm" method="POST" action="">
+						<div>
+							<label class="formContent">Author:</label><br>
+							<input type="text" name="author">
+						</div>
+						<div>
+							<label class="formContent">Email:</label><br>
+							<input type="text" name="email">
+						</div>
+						<div>
+							<label class="formContent">Content:</label><br>
+							<textarea name="content"></textarea>
+						</div>
+						<div>
+							<input type="submit" value="Submit">
+							<input type="reset" value="Reset">
+						</div>
+					</form>
+				</div>
+				<script type="text/javascript" src="/assets/js/post.js"></script>
+			</article>
+			<footer>
+				<div id="footer">
+					<p></p>
+				</div>
+			</footer>
+		<div id="container">
+	</body>
+</html>
