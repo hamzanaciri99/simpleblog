@@ -4,10 +4,9 @@
 		<link rel="stylesheet" type="text/css" href="/assets/stylesheets/main.css">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 		<script type="text/javascript" src="/assets/js/jQuery3.3.1.js"></script>
-		<script type="text/javascript" src="/assets/js/main.js"></script>
 	</head>
 	<body>
-		<div id="loading">Loading ... </div>
+		<!--<div id="loading">Loading ... </div>-->
 		<div id="container">
 			<nav>
 				<table>
@@ -19,6 +18,29 @@
 				</table>
 			</nav>
 			<article>
+                <% posts.forEach(function(post) { %>
+                    <% var date = new Date(post.post_date) %>
+                    <% var content = post.post_content.substring(0,50) + "..." %>
+                    <div class="article">
+                        <strong class="title">
+                            <%= post.post_title %>
+                        </strong>
+                        <i class="author">
+                            <%= post.post_id %>
+                        </i>
+                        <i class="date">
+                            <%= date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds() + ' ' + date.toDateString() %>
+                        </i>
+                        <p class="content">
+                            <%= content %> 
+                        </p>
+                        <a href="">
+                            <b class="readMore">
+                                <a href="/post/<%= post.post_id %>">readMore...</a>
+                            </b>
+                        </a>
+                    </div>
+                <% }); %>
 			</article>
 			<footer>
 				<div id="footer">

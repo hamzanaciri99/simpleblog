@@ -20,7 +20,7 @@
 			</nav>
 			<article>
 				<h1>Add new article here !!</h1>
-				<form id="articleForm" method="POST" action="/api/posts">
+				<form id="articleForm" method="POST" action="/user/addPost">
 					<div>
 						<label class="formContent">Title:</label><br>
 						<input type="text" name="title">
@@ -30,8 +30,8 @@
 						<textarea name="content"></textarea>
 					</div>
 					<div>
-						<label class="formContent">Author:</label><br>
-						<input type="text" name="author">
+						<label class="formContent">Author(userID):</label><br>
+						<input type="text" name="user_id">
 					</div>
 					<div>
 						<input type="submit" value="Submit">

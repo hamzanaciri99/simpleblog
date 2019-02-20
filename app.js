@@ -1,5 +1,4 @@
 var express = require('express');
-var http = require("http");
 var app = express();
 var ejs = require('ejs');
 var port = process.env.PORT || 3000;
@@ -8,22 +7,15 @@ var port = process.env.PORT || 3000;
 app.set('view engine', 'ejs');
 app.use('/assets', express.static('public'));
 
-
-app.get('/', function(req, res){
-	res.render('index');
-});
-
 app.get('/post', function(req, res){
 	res.redirect('../');
 });
 
-app.get('/post/:id', function(req, res){
-	res.render('post', {
-		id: req.params.id
-	});
-});
 
-var postController = require('./controllers/postController');
+var postController = require('./controllers/postsController');
 postController(app);
+
+var userController = require('./controllers/usersController');
+userController(app);
 
 app.listen(port);

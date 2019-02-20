@@ -8,19 +8,6 @@ body {
 	margin: 100px 60px 0px 60px;
 }
 
-#loading {
-	font-size: 42pt;
-	width: 100%;
-	height: 100%;
-	text-align: center;
-	position: absolute;
-	background-color: #eee;
-	top: 0px;
-	left: 0px;
-	padding-top: 25%; 
-
-}
-
 a {
 	text-decoration: none;
 	color: black;

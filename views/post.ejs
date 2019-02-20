@@ -5,12 +5,8 @@
 		<link rel="stylesheet" type="text/css" href="/assets/stylesheets/post.css">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 		<script type="text/javascript" src="/assets/js/jQuery3.3.1.js"></script>
-		<script type="text/javascript">
-			var postID = "<%= id %>";
-		</script>
 	</head>
 	<body>
-		<div id="loading">Loading ... </div>
 		<div id="container">
 			<nav>
 				<table>
@@ -23,14 +19,36 @@
 			</nav>
 			<article>
 				<div id="post">
-					<h1 id="postTitle"></h1>
-					<p id="postContent"></p>
+					<h1 id="postTitle"><%= postData.post_title %></h1>
+					<p id="postContent"><%= postData.post_content %></p>
 					<hr>
-					<i id="postAuthor"></i>
-					<i id="postDate"></i>
+					<i id="postAuthor"><%= postData.user_name %></i>
+					<i id="postDate"><%= postData.post_date %></i>
 				</div>
 				<hr>
 				<div id="comments">
+                    <% commentData.forEach(function(comment) { %>
+                    <%     var date = comment.date %>
+                    <div class="comment">
+                        <div class="commentInfo">
+                            <i>
+                                <strong>Date: </strong>
+                                <%= date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds() + ' ' + date.toDateString() %>
+                            </i>
+                            <i>
+                                <strong>Author: </strong>
+                                <%= comment.user_name %>
+                            </i>
+                            <i>
+                                <strong>Email: </strong>
+                                <%= comment.user_email %>
+                            </i>
+                        </div>
+                        <div class="commentContent">
+                            <p><%= comment.comment_content %></p>
+                        </div>
+                    </div>
+                    <% }); %>
 				</div>
 				<div id="addComment">
 					<h1>Write new comment</h1>
@@ -53,7 +71,6 @@
 						</div>
 					</form>
 				</div>
-				<script type="text/javascript" src="/assets/js/post.js"></script>
 			</article>
 			<footer>
 				<div id="footer">
