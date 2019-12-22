@@ -64,8 +64,8 @@ function removePost(postID) {
     });
 }
 
-function updatePost(post) {
-    connection.query("UPDATE posts SET ?", post, function(err, res, fields){
+function updatePost(post, post_id) {
+    connection.query("UPDATE posts SET ? where post_id = ? ", [post, post_id], function(err, res, fields){
         if (err) throw err;
     });
 }

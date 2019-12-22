@@ -2,24 +2,34 @@
 	<head>
 		<title>Welcome to Blog</title>
 		<link rel="stylesheet" type="text/css" href="/assets/stylesheets/main.css">
-		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Calistoga|Josefin+Sans|Poppins|Roboto+Mono|Ubuntu&display=swap" rel="stylesheet">
+		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 	</head>
 	<body>
-		<div id="container">
-			<nav>
-				<table>
-					<tr>
-						<td><a href="/">Home</a></td>
-						<td><a href="/assets/addArticle.html">Add article</a></td>
-						<td id="selected"><a href="/assets/about.html">About</a></td>
-					</tr>
-				</table>
+		<div class="container-fluid">
+			<nav class="nav navbar-expand-lg navbar-dark bg-dark fixed-top">
+				<div class="collapse navbar-collapse" id="navbarText">
+					<ul class="navbar-nav mr-auto">
+						<li>
+							<a class="navbar-brand nav-item" href="#">Blog</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/addPost">Add article</a>
+						</li>
+						<li class="nav-item active">
+							<a class="nav-link" href="/about">About</a>
+						</li>
+					</ul>
+				</div>
 			</nav>
-			<article>
+			<div class="article">
 				
-			</article>
+			</div>
 			<footer>
-				<div id="footer">
+				<div class="footer">
 					<p>Article count : 900</p>
 				</div>
 			</footer>
