@@ -1,0 +1,63 @@
+<html>
+	<head>
+		<title>Welcome to Blog</title>
+		<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+        <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="/assets/stylesheets/login.css">
+		<link rel="stylesheet" type="text/css" href="/assets/stylesheets/main.css">
+		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="container-fluid">
+            <nav class="nav navbar-expand-lg navbar-dark fixed-top">
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav mr-auto">
+                        <li>
+                            <a class="navbar-brand nav-item" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/addPost">Add article</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <img src="<%= user.avatar %>" alt="avatar" class="user_avatar" >
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/account">
+                                Welcome <%= user.title %> <%= user.first_name %> <%= user.last_name %>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/user/logout">
+                                Logout <i class="fas fa-sign-out-alt"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="login-form mt-5">
+                <form class="" method="POST" action="/user/changeAvatar">
+                    <div class="avatar"><i class="material-icons">&#xE7FF;</i></div>
+                    <h4 class="modal-title">Change avatar</h4>
+                    <div class="form-group">
+                        <label for="thumb">Thumbnail</label>
+                        <input id="thumb" class="form-control" type="url" placeholder="http://example.com/thumb.jpg" name="thumb"/>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" id="submit" class="btn btn-dark btn-block btn-lg">Change</button>
+                    </div>
+                </form>
+            </div>
+		</div>
+		<script type="text/javascript" src="/assets/js/jQuery3.3.1.js"></script>
+		<script type="text/javascript" src="/assets/js/change.js"></script>
+		<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	</body>
+</html>

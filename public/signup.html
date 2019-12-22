@@ -1,0 +1,70 @@
+<html>
+	<head>
+		<title>Welcome to Blog</title>
+		<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="/assets/stylesheets/login.css">
+		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="container-fluid">
+            <div class=" login-form">
+                <form class="" method="POST" action="/user/signup">
+                    <div class="avatar"><i class="material-icons">&#xE7FF;</i></div>
+                    <h4 class="modal-title">Create new account</h4>
+                    <div class="form-group">
+                        <label for="first_name">First name</label>
+                        <input type="text" name="first_name" placeholder="Hamza" class="form-control"></input>
+                    </div>
+                    <div class="form-group">
+                        <label for="last_name">Last name</label>
+                        <input type="text" name="last_name" placeholder="NACIRI" class="form-control"></input>
+                    </div>
+                    <div class="form-group">
+                        <label for="user_name">Username</label>
+                        <input type="text" name="user_name" placeholder="choose a username, ex : naciri99" class="form-control"></input>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" placeholder="name123 / name@example.com" class="form-control"></input>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" placeholder="choose a password" class="form-control"></input>
+                    </div>
+                    <div class="form-group">
+                        <label for="title">How would you like to be addressed?</label>
+                        <div class="form-check">
+                            <input type="radio" name="title" value="Mr" class="form-check-input" />
+                            <label class="form-check-label">Mr.</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" name="title" value="Ms" class="form-check-input" />
+                            <label class="form-check-label">Ms.</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" name="title" value="Miss" class="form-check-input" />
+                            <label class="form-check-label">Miss.</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" name="title" value="Mrs" class="form-check-input" />
+                            <label class="form-check-label">Mrs.</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" name="title" value="" class="form-check-input" />
+                            <label class="form-check-label">I prefer not to be addressed by honorifics.</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-dark btn-block btn-lg">Sign up</button>
+                    </div>
+                </form>
+                <div class="text-center small">already have an account? <a href="/login">login</a></div>
+            </div>
+		</div>
+		<script type="text/javascript" src="/assets/js/jQuery3.3.1.js"></script>
+		<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	</body>
+</html>

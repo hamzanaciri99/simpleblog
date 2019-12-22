@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>Welcome to Blog</title>
+        <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="/assets/stylesheets/login.css">
+		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="container">
+            <div class=" login-form">
+                <form method="POST" action="/user/login">
+                    <div class="avatar"><i class="material-icons">&#xE7FF;</i></div>
+                    <h4 class="modal-title">Login to Your Account</h4>
+                    <div class="form-group">
+                        <input type="text" name="user_name" placeholder="name123 / name@example.com" class="form-control"></input>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="password" placeholder="enter your password" class="form-control"></input>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-dark btn-block btn-lg">Login</button>
+                    </div>
+                </form>
+                <div class="text-center small">Don't have an account? <a href="/signup">Sign up</a></div>
+            </div>
+		</div>
+		<script type="text/javascript" src="/assets/js/jQuery3.3.1.js"></script>
+		<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	</body>
+</html>

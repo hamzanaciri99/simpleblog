@@ -1,0 +1,105 @@
+<html>
+	<head>
+		<title>Welcome to Blog</title>
+		<link rel="stylesheet" type="text/css" href="/assets/stylesheets/main.css">
+		<link rel="stylesheet" type="text/css" href="/assets/stylesheets/add.css">
+		<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+		<link href="//cdn.quilljs.com/1.0.0/quill.snow.css" rel="stylesheet">
+		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="container-fluid">
+			<nav class="nav navbar-expand-lg navbar-dark fixed-top">
+				<div class="collapse navbar-collapse" id="navbarText">
+					<ul class="navbar-nav mr-auto">
+						<li>
+							<a class="navbar-brand nav-item" href="#">Blog</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/">Home</a>
+						</li>
+						<li class="nav-item active">
+							<a class="nav-link" href="/addPost">Add article</a>
+						</li>
+					</ul>
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<img src="<%= user.avatar %>" alt="avatar" class="user_avatar" >
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/account">
+								Welcome <%= user.title %> <%= user.first_name %> <%= user.last_name %>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/user/logout">
+								Logout <i class="fas fa-sign-out-alt"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<div class="row d-flex flex-row">
+				<div class="col-3">
+					<ul class="list-group">
+						<% posts.forEach(function(post) { %>
+							<% var date = new Date(post.post_date) %>
+							<li class="m-md-2 list-item">
+								<a href="/<%= post.post_id %>">
+									<img class="thumb" src="<%= post.thumb %>" width="100px" height="100px" >
+									<div class=" py-2 px-lg-3 item">
+										<span class="title">
+											<%= post.post_title %>
+										</span>
+										<span class="date">
+											<%= date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds() + ' ' + date.toDateString() %>
+										</span>
+										<span class="oper">
+											<a href="/edit/<%= post.post_id %>">
+												<span class="btn btn-outline-success edt">edit <i class="far fa-edit"></i></span>
+											</a>
+											<button class="btn btn-outline-danger rm">
+												<span class="<%= post.post_id %>">remove <i class="far fa-trash-alt"></i></span>
+											</button>
+										</span>
+									</div>
+								</a>
+							</li>
+						<% }); %>
+					</ul>
+				</div>
+				<div class="article col-9">
+						<div class="form-group">
+							<input id="title" value="<%= post.post_title%>" class="form-control" type="text" name="title" placeholder="title" required>
+						</div>
+						<div class="form-group">
+							<div id="toolbar"></div>
+							<div class="form-control" id="editor">
+								<p><%= post.post_content %></p>
+							</div>
+							<span id="<%= post.post_id %>" class="smt">
+									<p><%= post.post_content %></p>
+							</span>
+						</div>
+						<div class="form-group">
+							<label for="thumb">Thumbnail</label>
+							<input id="thumb" value=" <%= post.thumb %>" class="form-control" type="url" placeholder="http://example.com/thumb.jpg" name="thumb"/>
+						</div>
+						<div class="form-group">
+							<button id="submit" class="btn btn-dark" >Edit</button>
+						</div>
+				</div>
+			</div>
+			<footer>
+				<div id="footer">
+					<p></p>
+				</div>
+			</footer>
+		</div>
+		<script type="text/javascript" src="/assets/js/jQuery3.3.1.js"></script>
+		<script src="//cdn.quilljs.com/1.3.6/quill.js"></script>
+		<script type="text/javascript" src="/assets/js/edit.js"></script>
+		<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		<script src="https://kit.fontawesome.com/a34e3c0522.js" crossorigin="anonymous"></script>
+	</body>
+</html>
