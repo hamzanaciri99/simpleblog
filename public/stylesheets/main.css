@@ -50,10 +50,6 @@ nav div {
     text-transform: uppercase;
 }
 
-#post span:last-of-type::before{
-    content: "Author: ";
-}
-
 #post h1 {
     text-align: center;
     font-size: 72pt;
