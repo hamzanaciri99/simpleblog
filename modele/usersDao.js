@@ -1,10 +1,10 @@
 // import { createConnection } from 'mysql';
 var mysql = require('mysql');
 var connection = mysql.createConnection({
-	host	: 'localhost',
-	user 	: 'root',
-	password: '',
-	database : 'mysimpleblog' 
+	host	: 'remotemysql.com',
+	user 	: '4TRwdXT4am',
+	password: 'Yn5NHeekdn',
+	database : '4TRwdXT4am' 
 });
 
 connection.connect();
